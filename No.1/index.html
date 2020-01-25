@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue.js App</title>
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app" v-cloak>
+            <p ref="hello" v-html="message"></p>
+            <div v-cloak>{{ message }}</div>
+            <transition>
+                <p v-if="show">show</p>
+            </transition>
+            <button v-on:click="handleClick">Click</button>
+            <input v-model.number="message">
+            <div v-bind:text-content.prop="message">propaaa</div>
+            <div v-bind:scroll-top.prop="scroll">scroll</div>
+            <pre>{{ $data }}</pre>
+            <p v-if="show">{{ count }}回クリックしたよ</p>
+            <button v-on:click="increment">カントを増やす</button>
+            <button v-on:click="show=!show">表示／非表示</button>
+            <span ref="count" v-if="show">0</span>
+            <p v-bind:class="{ child: isChild, 'is-active': isActive }">Text</p>
+            <p v-bind:style="{ color: textColor, backgroundColor: bgColor }">Text</p>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink" />
+            </svg>
+            <input type="range" min="0" max="100" v-model="radius">
+            <ul>
+                <button v-on:click="doAdd">モンスター追加</button>
+                <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp">
+                    ID.{{ item.id }} {{item.name }} HP.{{ item.hp }}
+                    <span v-if="item.hp < 50">溺死</span>
+                    <button v-on:click="doRemove(index)">モンスター削除</button>
+                    <button v-on:click="doAttack(index)">攻撃</button>
+                </li>
+            </ul>
+            <button v-on:click="handleClick($event, item)">Click</button><br/>
+            <img src="image.png" v-on:load="show=true" v-bind:class="{hide: !show}">
+            <div v-on:scroll="handler">scroll</div>
+            <div v-on:mousewheel="handler">mousewheel</div>
+            <div v-on:dragstart="handler" draggable>dragstart</div>
+            <div v-on:click.right="handler">example</div>
+            <div v-on:click="handler('div1')">
+                div1
+                <a href="#top" v-on:click.stop="handler('div2')">div2</a>
+            </div>
+            
+            <input v-bind:value="message" v-on:input="handleInput"><br/>
+            <textarea v-model="message"></textarea><br/>
+            <label>
+                <input type="checkbox" v-model="val" true-value="yes" false-value="no"> {{ val }}
+            </label>
+            <label><input type="checkbox" v-model="val2" value="A">A</label>
+            <label><input type="checkbox" v-model="val2" value="B">B</label>
+            <label><input type="checkbox" v-model="val2" value="C">C</label>
+            <p>{{ val2 }}</p>
+            <label><input type="radio" v-model="val3" value="A">A</label>
+            <label><input type="radio" v-model="val3" value="B">B</label>
+            <label><input type="radio" v-model="val3" value="C">C</label>
+            <p>{{ val3 }}</p>
+            <select v-model="val3" multiple>
+                <option disabled="disabled">選択してください</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+            <input type="file" v-on:change="handleChange">
+            <div v-if="preview"><img v-bind:src="preview"></div>
+            </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
