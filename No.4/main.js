@@ -19,7 +19,8 @@ var app = new Vue({
     methods: {
         getAnswer: function () {
             if (this.keyword === '') {
-                this.item = null
+                this.items = null
+                this.message = ''
                 return
             }
 
