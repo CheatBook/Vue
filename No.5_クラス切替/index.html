@@ -9,7 +9,9 @@
 
 <body>
     <div id="app">
-
+        <p>
+            Hello <span v-bind:class="{ large: isLarge }">Vue.js</span>
+        </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
