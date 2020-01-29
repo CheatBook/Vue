@@ -22,6 +22,12 @@
         <p>
             Hello <span v-bind:class="[isLarge ? largeClass : '', dangerClass]">Vue.js</span>
         </p>
+        <p>
+            Hello <span v-bind:style="{ color: color, 'font-size': fontSize + 'px' }">Vue.js</span>
+        </p>
+        <p>
+            Hello <span v-bind:style="styleObject">Vue.js</span>
+        </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
