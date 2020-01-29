@@ -15,6 +15,15 @@
         <p>
             {{ message }}
         </p>
+        <p>
+            <input type="text" v-model="message2">
+            <input type="text" v-on:keyup.27="clear" v-model="message2">
+            <input type="text" v-on:keyup.esc="clear" v-model="message2">
+            <input type="text" v-on:keyup.esc.space.up="clear" v-model="message2">
+            <input type="text" v-on:keyup.ctrl.67="clear" v-model="message2">
+        </p>
+        <div v-on:click.shift="clickHandlerAlert">ClickMe</div>
+        <div @click.shift="clickHandlerAlert">ClickMe</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
