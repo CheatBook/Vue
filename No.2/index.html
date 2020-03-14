@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Vue.js App</title>
-        <link href="main.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="app" v-cloak>
-            <input type="file" v-on:change="handleChange">
-            <div v-if="preview"><img v-bind:src="preview"></div>
-            <br>
-            <input type="range" v-model.number="val">{{ val }}
-            <br>
-            <input v-model.number="budget">円以下に絞り込む
-            <input v-model.number="limit">件を表示
-            <p>{{ matched.length }} 件中 {{ limited.length }} 件を表示中</p>
-            <ul>
-                <li v-for="item in limited" v-bind:key="item.id">
-                    {{ item.name }} {{ item.price }}円
-                </li>
-            </ul>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
-        <script src="main.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <input type="file" v-on:change="handleChange" />
+      <div v-if="preview"><img v-bind:src="preview" /></div>
+      <br />
+      <input type="range" v-model.number="val" />{{ val }}
+      <br />
+      <input v-model.number="budget" />円以下に絞り込む
+      <input v-model.number="limit" />件を表示
+      <p>{{ matched.length }} 件中 {{ limited.length }} 件を表示中</p>
+      <ul>
+        <li v-for="item in limited" v-bind:key="item.id">
+          {{ item.name }} {{ item.price }}円
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

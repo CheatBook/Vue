@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Vue.js App</title>
-    <link href="main.css" rel="stylesheet">
-</head>
+    <link href="main.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <p>
-            Hello <span class="bg-gray text-blue"
-                v-bind:class="{ large: isLarge, 'text-danger': hasError }">Vue.js</span>
-        </p>
-        <p>
-            Hello <span v-bind:class="[largeClass, dangerClass]">Vue.js</span>
-        </p>
-        <p>
-            Hello <span v-bind:class="classObject">Vue.js</span>
-        </p>
-        <p>
-            Hello <span v-bind:class="[isLarge ? largeClass : '', dangerClass]">Vue.js</span>
-        </p>
-        <p>
-            Hello <span v-bind:style="{ color: color, 'font-size': fontSize + 'px' }">Vue.js</span>
-        </p>
-        <p>
-            Hello <span v-bind:style="styleObject">Vue.js</span>
-        </p>
+      <p>
+        Hello
+        <span
+          class="bg-gray text-blue"
+          v-bind:class="{ large: isLarge, 'text-danger': hasError }"
+          >Vue.js</span
+        >
+      </p>
+      <p>Hello <span v-bind:class="[largeClass, dangerClass]">Vue.js</span></p>
+      <p>Hello <span v-bind:class="classObject">Vue.js</span></p>
+      <p>
+        Hello
+        <span v-bind:class="[isLarge ? largeClass : '', dangerClass]"
+          >Vue.js</span
+        >
+      </p>
+      <p>
+        Hello
+        <span v-bind:style="{ color: color, 'font-size': fontSize + 'px' }"
+          >Vue.js</span
+        >
+      </p>
+      <p>Hello <span v-bind:style="styleObject">Vue.js</span></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,15 +1,19 @@
-.v-enter-active, .v-leave-active {
-    transition: opacity 1s;
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s;
 }
 
-.v-enter, .v-leave-to {
-    opacity: 0;
+.v-enter,
+.v-leave-to {
+  opacity: 0;
 }
 
 /* [v-cloak] { display: none; } */
 
 @keyframes cloak-in {
-    0% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
 }
 /* #app {
     animation: cloak-in 1s;
@@ -18,9 +22,9 @@
     opacity: 0;
 } */
 img {
-    opacity: 1;
-    transition: opacity 1s;
+  opacity: 1;
+  transition: opacity 1s;
 }
 img.hide {
-    opacity: 0;
+  opacity: 0;
 }

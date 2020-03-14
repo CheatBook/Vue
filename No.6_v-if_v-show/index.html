@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Vue.js App</title>
-    <link href="main.css" rel="stylesheet">
-</head>
+    <link href="main.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <p v-if="toggle">
-            YES
-        </p>
-        <p v-else>
-            NO
-        </p>
-        <p v-if="color==='red'">
-            Stop
-        </p>
-        <p v-else-if="color==='yellow'">
-                Caution
-        </p>
-        <p v-else-if="color==='blue'">
-                Go
-        </p>
-        <p v-else>
-            Not red/yellow/blue
-        </p>
+      <p v-if="toggle">
+        YES
+      </p>
+      <p v-else>
+        NO
+      </p>
+      <p v-if="color==='red'">
+        Stop
+      </p>
+      <p v-else-if="color==='yellow'">
+        Caution
+      </p>
+      <p v-else-if="color==='blue'">
+        Go
+      </p>
+      <p v-else>
+        Not red/yellow/blue
+      </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,9 +1,7 @@
 var app = new Vue({
-    el: '#app',
-    data: {
-        show: false
-    },
-    methods: {
-    },
-
-})
+  el: "#app",
+  data: {
+    show: false
+  },
+  methods: {}
+});

@@ -1,7 +1,10 @@
 <template>
   <div>
     <LikeHeader></LikeHeader>
-    <LikeNumber :total-number="number" v-on:my-click="number = $event"></LikeNumber>
+    <LikeNumber
+      :total-number="number"
+      v-on:my-click="number = $event"
+    ></LikeNumber>
     <button @click="currentComponent = 'Home'">Home</button>
     <button @click="currentComponent = 'About'">About</button>
     <keep-alive>
@@ -11,9 +14,18 @@
       <EventTitle v-model="eventData.title"></EventTitle>
       <h2>イベントのフォーム</h2>
       <label for="maxNumber">最大人数</label>
-      <input id="maxNumber" type="number" v-model.lazy.number="eventData.maxNumber" />
+      <input
+        id="maxNumber"
+        type="number"
+        v-model.lazy.number="eventData.maxNumber"
+      />
       <p>{{ eventData.maxNumber }}</p>
-      <textarea id="detail" cols="30" rows="10" v-model="eventData.detail"></textarea>
+      <textarea
+        id="detail"
+        cols="30"
+        rows="10"
+        v-model="eventData.detail"
+      ></textarea>
       <p>{{ eventData.detail }}</p>
       <input type="checkbox" id="isPrivate" v-model="eventData.isPrivate" />
       <label for="isPrivate">非公開</label>
@@ -34,7 +46,9 @@
       <p>{{ eventData.price }}</p>
       <p>開催場所</p>
       <select v-model="eventData.location" multiple>
-        <option v-for="location in eventData.locations" :key="location">{{ location }}</option>
+        <option v-for="location in eventData.locations" :key="location">{{
+          location
+        }}</option>
       </select>
       <p>{{ eventData.location }}</p>
     </div>

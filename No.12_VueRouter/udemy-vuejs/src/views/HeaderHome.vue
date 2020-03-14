@@ -2,8 +2,12 @@
   <div>
     <h2>Home</h2>
     <nav>
-      <router-link to="/" active-class="link--active" exact class="link">Home</router-link>
-      <router-link to="/users/1" active-class="link--active" exact class="link">Users</router-link>
+      <router-link to="/" active-class="link--active" exact class="link"
+        >Home</router-link
+      >
+      <router-link to="/users/1" active-class="link--active" exact class="link"
+        >Users</router-link
+      >
       <button @click="increment(2)">+1</button>
       <button @click="decrement(2)">-1</button>
     </nav>
@@ -26,7 +30,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 div {
