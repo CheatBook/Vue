@@ -28,6 +28,7 @@ axios.interceptors.response.use(
   }
 );
 
+store.dispatch("autoLogin");
 new Vue({
   router,
   store,
